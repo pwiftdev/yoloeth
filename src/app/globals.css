@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boldonse:wght@400;500;600;700&display=swap');
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +20,9 @@
   }
 }
 
-body {
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -31,3 +37,177 @@ body {
     text-wrap: balance;
   }
 }
+
+.meme-font {
+  font-family: 'Luckiest Guy', cursive, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.fredoka-font {
+  font-family: 'Fredoka', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.boldonse-font {
+  font-family: 'Boldonse', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.bangers-font {
+  font-family: 'Bangers', cursive, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@layer base {
+  h1, h2 {
+    @apply fredoka-font font-extrabold text-yellow-300;
+  }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-blur {
+  background: linear-gradient(270deg, #06b6d4, #1e3a8a, #db2777, #06b6d4);
+  background-size: 600% 600%;
+  animation: gradient-move 12s ease-in-out infinite;
+  opacity: 0.95;
+  backdrop-filter: blur(16px);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(270deg, #bab5a5, #6a8539, #bab5a5, #6a8539);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes chaos-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.2) translateY(-10px);
+  }
+  20% {
+    transform: scale(1) translateY(0px);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+  }
+}
+
+.animate-chaos-pop {
+  animation: chaos-pop 1.8s cubic-bezier(0.4, 0.8, 0.2, 1) infinite;
+}
+
+@keyframes chaos-fly-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh) scale(0.5) rotate(-30deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.2) rotate(5deg);
+  }
+  40% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) scale(0.5) rotate(20deg);
+  }
+}
+
+@keyframes chaos-wiggle {
+  0%, 100% { transform: rotate(-8deg) scale(0.8); opacity: 0; }
+  10% { opacity: 1; }
+  20% { transform: rotate(8deg) scale(1.2); }
+  40% { transform: rotate(-8deg) scale(1); }
+  60% { transform: rotate(8deg) scale(1.1); }
+  80% { transform: rotate(-8deg) scale(1); }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes chaos-flash {
+  0%, 100% { opacity: 0; filter: brightness(1.5); }
+  10% { opacity: 1; filter: brightness(2); }
+  20% { filter: brightness(1); }
+  50% { filter: brightness(2.5); }
+  80% { opacity: 1; filter: brightness(1); }
+  100% { opacity: 0; filter: brightness(1.5); }
+}
+
+@keyframes chaos-strike {
+  0% { opacity: 0; text-decoration: none; transform: scale(0.7) skewX(-20deg); }
+  10% { opacity: 1; text-decoration: line-through; transform: scale(1.2) skewX(10deg); }
+  40% { text-decoration: line-through; transform: scale(1) skewX(0deg); }
+  80% { opacity: 1; text-decoration: line-through; }
+  100% { opacity: 0; text-decoration: none; transform: scale(0.7) skewX(20deg); }
+}
+
+@keyframes chaos-spin {
+  0% { opacity: 0; transform: scale(0.5) rotate(-180deg); }
+  10% { opacity: 1; }
+  40% { transform: scale(1.1) rotate(20deg); }
+  60% { transform: scale(1) rotate(-20deg); }
+  80% { transform: scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: scale(0.5) rotate(180deg); }
+}
+
+.chaos-fly-in { animation-name: chaos-fly-in; }
+.chaos-wiggle { animation-name: chaos-wiggle; }
+.chaos-flash { animation-name: chaos-flash; }
+.chaos-strike { animation-name: chaos-strike; }
+.chaos-spin { animation-name: chaos-spin; }
