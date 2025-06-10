@@ -6,6 +6,7 @@ import ContractAddressSection from "./components/ContractAddressSection";
 import AnimatedInView from "./components/AnimatedInView";
 import { motion } from "framer-motion";
 import HowItWorks from "./components/HowItWorks";
+import LamboOrBurgerSection from "./components/LamboOrBurgerSection";
 
 const TokenomicsPieChart = dynamic(() => import("./components/TokenomicsPieChart"), { ssr: false });
 const TokenomicsCandlesBg = dynamic(() => import("./components/TokenomicsCandlesBg"), { ssr: false });
@@ -57,6 +58,8 @@ export default function Home() {
           </div>
         </section>
       </AnimatedInView>
+      {/* Lambo or Burger Section */}
+      <LamboOrBurgerSection />
       {/* How It Works Section */}
       <HowItWorks />
       {/* Tokenomics Section */}

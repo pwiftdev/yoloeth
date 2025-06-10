@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ContractAddressSection() {
   const btnRef = useRef<HTMLButtonElement>(null);
-  const contract = "0x1234567890abcdef1234567890abcdef12345678";
+  const contract = "not launched yet";
   // Split for visual break
   const contractFirst = contract.slice(0, 22);
   const contractSecond = contract.slice(22);
@@ -19,7 +19,7 @@ export default function ContractAddressSection() {
   }
 
   return (
-    <section className="w-full flex justify-center items-center py-6 bg-black/80 border-b border-zinc-800">
+    <section className="w-full flex justify-center items-center py-12 bg-black/80 border-b border-zinc-800 min-h-[120px]">
       {/* Overlay */}
       {showOverlay && (
         <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black bg-opacity-95 animate-fade-in-out">
@@ -29,7 +29,7 @@ export default function ContractAddressSection() {
           <Image src="/headnobg.png" alt="YOLO Head" width={80} height={80} className="drop-shadow-2xl" />
         </div>
       )}
-      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 mx-auto w-full max-w-sm md:max-w-2xl">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mx-auto w-full max-w-sm md:max-w-2xl">
         <span className="text-lg md:text-2xl font-mono text-green-400 bg-zinc-900 px-4 py-2 rounded-lg select-all shadow-inner break-all">
           <span className="block md:inline">{contractFirst}</span>
           <span className="block md:inline">{contractSecond}</span>

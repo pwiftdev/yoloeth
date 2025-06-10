@@ -51,7 +51,7 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex flex-1 flex-wrap gap-4 md:gap-8 text-lg md:text-xl font-bold items-center justify-center sticky top-0 z-50">
           <Link href="#tokenomics" className="hover:text-yellow-300 transition-colors">Tokenomics</Link>
-          <Link href="#how" className="hover:text-yellow-300 transition-colors">How It Works</Link>
+          <Link href="#how-it-works" className="hover:text-yellow-300 transition-colors">How It Works</Link>
           <Link href="#community" className="hover:text-yellow-300 transition-colors">Community</Link>
         </nav>
         {/* Buy Button only on desktop */}
@@ -83,7 +83,7 @@ export default function Header() {
           </button>
           <nav className="relative z-[150] flex flex-col items-center justify-center gap-8 text-3xl font-extrabold fredoka-font w-full sticky top-0 z-50">
             <Link href="#tokenomics" onClick={() => setMenuOpen(false)} className="hover:text-yellow-300 transition-colors px-6 py-3">Tokenomics</Link>
-            <Link href="#how" onClick={() => setMenuOpen(false)} className="hover:text-yellow-300 transition-colors px-6 py-3">How It Works</Link>
+            <Link href="#how-it-works" onClick={() => setMenuOpen(false)} className="hover:text-yellow-300 transition-colors px-6 py-3">How It Works</Link>
             <Link href="#community" onClick={() => setMenuOpen(false)} className="hover:text-yellow-300 transition-colors px-6 py-3">Community</Link>
             <a href="#buy" onClick={() => setMenuOpen(false)} className="px-8 py-4 bg-pink-500 text-white rounded-full shadow-lg hover:bg-pink-600 transition-colors fredoka-font mt-6">
               BUY NOW

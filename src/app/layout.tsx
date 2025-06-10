@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import { Bangers } from "next/font/google";
 import React from "react";
+import LinksBar from "./components/LinksBar";
 
 const bangers = Bangers({ subsets: ["latin"], weight: "400" });
 
@@ -15,6 +16,7 @@ export default function RootLayout({
       <body className="bg-[#1a1a1a] min-h-screen p-0 m-0">
         <Header />
         {children}
+        <LinksBar />
       </body>
     </html>
   );

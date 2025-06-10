@@ -64,8 +64,8 @@ export default function HowItWorks() {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
       const vh = window.innerHeight;
-      // Section is considered active if at least 40% is visible
-      const visible = rect.top < vh * 0.6 && rect.bottom > vh * 0.4;
+      // Section is considered active if much more is visible (stricter threshold)
+      const visible = rect.top < vh * 0.2 && rect.bottom > vh * 0.8;
       setActive(visible);
     };
     window.addEventListener("scroll", handleScroll);
@@ -119,10 +119,19 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 80, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -80, scale: 0.96 }}
-              transition={{ duration: 0.7, ease: [0.4, 1.2, 0.4, 1] }}
+              transition={{ duration: 0.25, ease: [0.4, 1.2, 0.4, 1] }}
               className="w-full max-w-3xl px-6 py-16 md:py-24 flex flex-col items-center justify-center relative"
               style={{ minHeight: '60vh', background: 'transparent' }}
             >
+              {/* Gradient background behind the card content */}
+              <div
+                className="absolute inset-0 z-0 rounded-3xl pointer-events-none"
+                style={{
+                  background: 'radial-gradient(circle at 60% 40%, #fde04788 0%, #f472b688 60%, #1e293b88 100%)',
+                  filter: 'blur(32px)',
+                  opacity: 0.85,
+                }}
+              />
               <div className="relative z-10 flex flex-col items-center justify-center w-full">
                 <div className="text-6xl mb-6 select-none">{steps[step].icon}</div>
                 <h3 className={`text-4xl md:text-5xl font-extrabold mb-4 text-center drop-shadow-lg fredoka-font ${steps[step].titleClass}`}>{steps[step].title}</h3>
