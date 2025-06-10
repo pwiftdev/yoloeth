@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ContractAddressSection() {
   const btnRef = useRef<HTMLButtonElement>(null);
-  const contract = "not launched yet";
+  const contract = "0x45c8994A2BeB155A2aE9982Ca41C5582D8d0C9c3";
   // Split for visual break
   const contractFirst = contract.slice(0, 22);
   const contractSecond = contract.slice(22);
