@@ -120,18 +120,9 @@ export default function HowItWorks() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -80, scale: 0.96 }}
               transition={{ duration: 0.7, ease: [0.4, 1.2, 0.4, 1] }}
-              className="w-full max-w-3xl px-6 py-16 md:py-24 flex flex-col items-center justify-center relative rounded-3xl shadow-2xl"
-              style={{ minHeight: '60vh' }}
+              className="w-full max-w-3xl px-6 py-16 md:py-24 flex flex-col items-center justify-center relative"
+              style={{ minHeight: '60vh', background: 'transparent' }}
             >
-              {/* Animated circular blurred gradient background */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] md:w-[70%] md:h-[70%] rounded-full z-0 animate-gradient-move"
-                style={{
-                  background: 'radial-gradient(circle at 60% 40%, #fde047cc 0%, #f472b6cc 60%, #1e293bcc 100%)',
-                  filter: 'blur(60px)',
-                  opacity: 0.85,
-                  animation: 'gradient-move 8s ease-in-out infinite',
-                }}
-              />
               <div className="relative z-10 flex flex-col items-center justify-center w-full">
                 <div className="text-6xl mb-6 select-none">{steps[step].icon}</div>
                 <h3 className={`text-4xl md:text-5xl font-extrabold mb-4 text-center drop-shadow-lg fredoka-font ${steps[step].titleClass}`}>{steps[step].title}</h3>
