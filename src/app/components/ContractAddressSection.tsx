@@ -19,7 +19,7 @@ export default function ContractAddressSection() {
   }
 
   return (
-    <section className="w-full flex justify-center items-center py-12 bg-black/80 border-b border-zinc-800 min-h-[120px]">
+    <section className="w-full flex justify-center items-center py-6 bg-black/80 border-b border-zinc-800">
       {/* Overlay */}
       {showOverlay && (
         <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black bg-opacity-95 animate-fade-in-out">
@@ -29,18 +29,10 @@ export default function ContractAddressSection() {
           <Image src="/headnobg.png" alt="YOLO Head" width={80} height={80} className="drop-shadow-2xl" />
         </div>
       )}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mx-auto w-full max-w-sm md:max-w-2xl">
-        <span className="text-lg md:text-2xl font-mono text-green-400 bg-zinc-900 px-4 py-2 rounded-lg select-all shadow-inner break-all">
-          <span className="block md:inline">{contractFirst}</span>
-          <span className="block md:inline">{contractSecond}</span>
+      <div className="flex flex-col items-center gap-4 mx-auto w-full max-w-sm md:max-w-2xl">
+        <span className="text-2xl md:text-3xl font-extrabold text-yellow-300 fredoka-font text-center px-4 py-2 rounded-lg bg-zinc-900/80 shadow-inner">
+          not launched yet
         </span>
-        <button
-          ref={btnRef}
-          onClick={handleCopy}
-          className="px-6 py-2 bg-gradient-to-r from-green-400 to-pink-500 text-white font-extrabold rounded-full shadow-lg hover:scale-105 transition-all fredoka-font text-lg md:text-xl"
-        >
-          {copied ? 'Copied!' : 'Copy'}
-        </button>
       </div>
       <style>{`
         @keyframes fade-in-out {

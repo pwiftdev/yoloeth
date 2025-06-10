@@ -27,20 +27,5 @@ const LINKS = [
 ];
 
 export default function LinksBar() {
-  return (
-    <div className="w-full flex justify-center py-6 bg-black/80 border-t border-zinc-800 gap-8">
-      {LINKS.map(link => (
-        <a
-          key={link.label}
-          href={link.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-2 rounded-full bg-zinc-900/80 hover:bg-pink-500/80 transition-colors text-white font-bold text-lg shadow-lg hover:scale-105"
-        >
-          {link.icon}
-          <span className="hidden sm:inline">{link.label}</span>
-        </a>
-      ))}
-    </div>
-  );
+  return null;
 } 
