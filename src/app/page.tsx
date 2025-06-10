@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import TokenomicsMovingGradients from "./components/TokenomicsMovingGradients";
 import ContractAddressSection from "./components/ContractAddressSection";
 import AnimatedInView from "./components/AnimatedInView";
+import { motion } from "framer-motion";
+import HowItWorks from "./components/HowItWorks";
 
 const TokenomicsPieChart = dynamic(() => import("./components/TokenomicsPieChart"), { ssr: false });
 const TokenomicsCandlesBg = dynamic(() => import("./components/TokenomicsCandlesBg"), { ssr: false });
@@ -55,6 +57,8 @@ export default function Home() {
           </div>
         </section>
       </AnimatedInView>
+      {/* How It Works Section */}
+      <HowItWorks />
       {/* Tokenomics Section */}
       <AnimatedInView>
         <section id="tokenomics" className="w-full py-24 relative overflow-hidden bg-black">
@@ -75,6 +79,9 @@ export default function Home() {
                 A perfectly balanced distribution for maximum YOLO potential. 
                 No paper hands, only diamond hands allowed.
               </p>
+              <div className="mt-6 text-3xl font-extrabold fredoka-font text-yellow-300 drop-shadow-lg">
+                Total Supply: <span className="text-white">1,000,000,000</span> $YOLO
+              </div>
             </div>
             
             <div className="relative">

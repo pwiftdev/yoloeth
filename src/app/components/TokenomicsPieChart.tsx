@@ -3,11 +3,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const data = [
-  { label: "DEX Liquidity Pool", value: 20, color: "#22c55e", description: "Provides liquidity for decentralized trading." },
-  { label: "Marketing", value: 10, color: "#f43f5e", description: "Funds for meme campaigns and viral growth." },
-  { label: "Rebase Pool", value: 40, color: "#3b82f6", description: "Automated rewards and rebase mechanics." },
-  { label: "Development", value: 10, color: "#f59e0b", description: "Dev team, audits, and new features." },
-  { label: "CEX Liquidity Reserves", value: 20, color: "#8b5cf6", description: "Liquidity for centralized exchanges." },
+  { label: "DEX Liquidity Pool", value: 90, color: "#3b82f6", description: "Provides liquidity for decentralized trading on DEXs." },
+  { label: "Marketing & Development", value: 10, color: "#f59e0b", description: "Funds for marketing, growth, and ongoing development." },
 ];
 
 export default function TokenomicsPieChart() {
