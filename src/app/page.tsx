@@ -5,7 +5,6 @@ import TokenomicsMovingGradients from "./components/TokenomicsMovingGradients";
 import ContractAddressSection from "./components/ContractAddressSection";
 import AnimatedInView from "./components/AnimatedInView";
 import { motion } from "framer-motion";
-import HowItWorks from "./components/HowItWorks";
 import LamboOrBurgerSection from "./components/LamboOrBurgerSection";
 
 const TokenomicsPieChart = dynamic(() => import("./components/TokenomicsPieChart"), { ssr: false });
@@ -60,8 +59,6 @@ export default function Home() {
       </AnimatedInView>
       {/* Lambo or Burger Section */}
       <LamboOrBurgerSection />
-      {/* How It Works Section */}
-      <HowItWorks />
       {/* Tokenomics Section */}
       <AnimatedInView>
         <section id="tokenomics" className="w-full py-24 relative overflow-hidden bg-black">
@@ -93,27 +90,23 @@ export default function Home() {
           </div>
         </section>
       </AnimatedInView>
-      {/* Community Section */}
+      {/* X Link Section */}
       <AnimatedInView>
         <section id="community" className="w-full py-24 bg-gradient-to-b from-black via-zinc-900 to-black flex flex-col items-center justify-center">
           <div className="container mx-auto px-4 flex flex-col items-center gap-8">
             <h2 className="text-5xl md:text-6xl font-extrabold fredoka-font text-yellow-300 mb-4 text-center drop-shadow-lg">
-              JOIN THE $YOLO COMMUNITY
+              FOLLOW $YOLO
             </h2>
-            <p className="text-2xl md:text-3xl text-white/90 fredoka-font text-center max-w-2xl mb-6">
-              Track every win and every rekt moment—<span className="text-pink-400 font-extrabold">all documented by our custom Telegram bot</span>.<br/>
-              See who&apos;s up, who&apos;s down, and who&apos;s the next $YOLO legend or meme. Don&apos;t miss out!
-            </p>
             <a
-              href="https://t.me/yoloeth"
+              href="https://x.com/yoloitfam"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-12 py-5 bg-gradient-to-r from-green-400 to-pink-500 text-white text-3xl md:text-4xl font-extrabold rounded-full shadow-2xl hover:scale-105 transition-all fredoka-font flex items-center gap-4 mt-4"
+              className="px-12 py-5 bg-gradient-to-r from-blue-400 to-pink-500 text-white text-3xl md:text-4xl font-extrabold rounded-full shadow-2xl hover:scale-105 transition-all fredoka-font flex items-center gap-4 mt-4"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 6.584a.75.75 0 0 0-1.04-.832l-17.25 7.5a.75.75 0 0 0 .04 1.39l4.89 1.96 2.06 4.12a.75.75 0 0 0 1.36-.02l2.13-4.26 4.89 1.96a.75.75 0 0 0 1.04-.832l-1.5-12Z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
-              <span>Join Telegram</span>
+              <span>Follow on X</span>
             </a>
           </div>
         </section>
